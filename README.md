@@ -11,3 +11,18 @@ Full list of software:
 - php7.0-fpm
 - certbot (letsencrypt)
 - Linode for domain stuff
+
+## MediaWiki extensions
+
+- Scribunto
+- ParserFunctions
+- Cite
+
+## MediaWiki imports
+
+```
+Template:Reflist
+Template:Snd
+MediaWiki:Common.css
+MediaWiki:Common.js
+```
