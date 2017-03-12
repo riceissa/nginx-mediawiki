@@ -28,6 +28,10 @@ page (`MediaWiki:Common.css`).
 ```
 Template:Reflist
 Template:Snd
+Template:Spaced en dash
+Template:Technology company timelines
+Template:Navbox
 MediaWiki:Common.css
 MediaWiki:Common.js
+Template:Column-width
 ```
