@@ -46,4 +46,5 @@ Template:Cite press release
 Template:Cite book
 Template:Use mdy dates
 Template:Cite conference
+Template:Rp
 ```
