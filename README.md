@@ -20,6 +20,11 @@ Full list of software:
 
 ## MediaWiki imports
 
+[MediaWiki's instructions](https://www.mediawiki.org/wiki/Help:Templates#Copying_from_one_wiki_to_another)
+specifically say to 'Uncheck the box "Include only the current revision, not the full history".'
+**However** I find that checking this returns a very old version of the page for at least one
+page (`MediaWiki:Common.css`).
+
 ```
 Template:Reflist
 Template:Snd
