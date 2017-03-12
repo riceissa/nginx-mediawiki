@@ -40,4 +40,6 @@ Template:Navbox
 MediaWiki:Common.css
 MediaWiki:Common.js
 Template:Column-width
+Template:Cite journal
+Template:Cite web
 ```
