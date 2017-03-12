@@ -43,4 +43,5 @@ Template:Column-width
 Template:Cite journal
 Template:Cite web
 Template:Cite press release
+Template:Cite book
 ```
