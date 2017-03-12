@@ -24,6 +24,12 @@ Full list of software:
 specifically say to 'Uncheck the box "Include only the current revision, not the full history".'
 **However** I find that checking this returns a very old version of the page for at least one
 page (`MediaWiki:Common.css`).
+I have no idea what this is, but one remedy is to export both with this box checked and with this
+box unchecked.
+You can always run `php rebuildrecentchanges.php` in the `maintenance` directory to
+deduplicate revisions, so I'm pretty sure importing twice is fine.
+(Note: I began by trying to import the XML dump with the "full history" so I have
+no idea what happens if you only try to get the most recent version.)
 
 ```
 Template:Reflist
