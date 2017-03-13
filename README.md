@@ -41,6 +41,10 @@ vim /etc/nginx/sites-available/default
 
 coming soon.
 
+## Set up MySQL
+
+coming soon.
+
 ## Install MediaWiki
 
 We will be installing MediaWiki at `/var/www/timelines/`.
