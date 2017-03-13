@@ -58,7 +58,7 @@ to the correct location, and add a few lines in `LocalSettings.php`.
 specifically say to 'Uncheck the box "Include only the current revision, not the full history".'
 **However** I find that checking this returns a very old version of the page for at least one
 page (`MediaWiki:Common.css`).
-I have no idea what this is, but one remedy is to export both with this box checked and with this
+I have no idea why this is, but one remedy is to export both with this box checked and with this
 box unchecked.
 You can always run `php rebuildrecentchanges.php` in the `maintenance` directory to
 deduplicate revisions, so I'm pretty sure importing twice is fine.
