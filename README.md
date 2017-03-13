@@ -96,11 +96,12 @@ content.
 
 The setup for these is pretty straightforward: download the tarball, extract it
 to the correct location, and add a few lines in `LocalSettings.php`.
+I'll just link to the official documentation because I have nothing to add.
 
-- Scribunto
-- ParserFunctions
-- Cite
-- Google Analytics
+- [Scribunto](https://www.mediawiki.org/wiki/Extension:Scribunto)
+- [ParserFunctions](https://www.mediawiki.org/wiki/Extension:ParserFunctions)
+- [Cite](https://www.mediawiki.org/wiki/Extension:Cite)
+- [Google Analytics](https://www.mediawiki.org/wiki/Extension:Google_Analytics_Integration)
 
 ## MediaWiki imports
 
