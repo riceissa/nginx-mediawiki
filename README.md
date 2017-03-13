@@ -26,13 +26,9 @@ As root:
 ```bash
 apt update
 apt upgrade
-apt install nginx
 apt install mysql-server
 mysql_secure_installation
-apt install php-fpm php-mysql
-systemctl restart php7.0-fpm
 apt install lynx # useful later for configuring MediaWiki
-apt install php-mbstring php-xml
 ```
 
 ## Set up nginx
@@ -41,6 +37,15 @@ apt install php-mbstring php-xml
   not all of it was necessary
 - Reference [How To Install Linux, Nginx, MySQL, PHP (LEMP stack) in Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04);
   not all of it was necessary
+
+As root:
+
+```bash
+apt install nginx
+apt install php-fpm php-mysql
+systemctl restart php7.0-fpm
+apt install php-mbstring php-xml
+```
 
 ## Set up MySQL
 
