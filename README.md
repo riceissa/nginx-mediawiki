@@ -210,6 +210,7 @@ Template:Respiratory pathology
 Template:Viral diseases
 Template:Quote
 Template:Citation needed
+Template:Cite encyclopedia
 ```
 
 Here is an example of an importing process:
