@@ -53,6 +53,9 @@ tar xvzf mediawiki-1.28.0.tar.gz
 mv mediawiki-1.28.0 /var/www/timelines
 ```
 
+Now do `lynx http://localhost/index.php` to fill in the web form to complete
+the installation.
+
 ## Set up HTTPS support
 
 Instructions are modified from the [official instructions](https://certbot.eff.org/all-instructions/#ubuntu-16-04-xenial-nginx).
