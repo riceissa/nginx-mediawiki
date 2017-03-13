@@ -65,6 +65,27 @@ vim /etc/crontab # add '0 0 1 * * letsencrypt renew'
 vim /etc/nginx/sites-available/default
 ```
 
+Now in `/etc/nginx/sites-available/default` add a new block to redirect all
+HTTP connections to HTTPS:
+
+    server {
+            listen 80;
+            listen [::]:80;
+            server_name timelines.issarice.com;
+            return 301 https://$host$request_uri;
+    }
+
+In the regular server block, change the port and give an SSL certificate:
+
+    server {
+            listen 443 ssl default_server;
+            listen [::]:443 ssl default_server;
+            ssl_certificate /etc/letsencrypt/live/timelines.issarice.com/fullchain.pem;
+            ssl_certificate_key /etc/letsencrypt/live/timelines.issarice.com/privkey.pem;
+
+            ...
+    }
+
 ## MediaWiki extensions
 
 The first three MediaWiki extensions are required for correctly rendering
