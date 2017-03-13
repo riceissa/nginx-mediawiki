@@ -28,6 +28,12 @@ mysql_secure_installation
 apt install php-fpm php-mysql
 systemctl restart php7.0-fpm
 apt install lynx # useful later for configuring MediaWiki
+apt install php-mbstring php-xml
+apt install letsencrypt
+letsencrypt certonly --webroot -w /var/www/timelines -d timelines.issarice.com
+letsencrypt renew --dry-run --agree-tos
+vim /etc/crontab # add 'letsencrypt renew'
+vim /etc/nginx/sites-available/default
 ```
 
 ## MediaWiki extensions
