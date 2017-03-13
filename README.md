@@ -209,6 +209,7 @@ Template:Portalbar
 Template:Respiratory pathology
 Template:Viral diseases
 Template:Quote
+Template:Citation needed
 ```
 
 Here is an example of an importing process:
