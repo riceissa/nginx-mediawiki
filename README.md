@@ -30,11 +30,6 @@ apt install php-fpm php-mysql
 systemctl restart php7.0-fpm
 apt install lynx # useful later for configuring MediaWiki
 apt install php-mbstring php-xml
-apt install letsencrypt
-letsencrypt certonly --webroot -w /var/www/timelines -d timelines.issarice.com
-letsencrypt renew --dry-run --agree-tos
-vim /etc/crontab # add '0 0 1 * * letsencrypt renew'
-vim /etc/nginx/sites-available/default
 ```
 
 ## Set up nginx
@@ -60,7 +55,15 @@ mv mediawiki-1.28.0 /var/www/timelines
 
 ## Set up HTTPS support
 
-coming soon.
+As root:
+
+```bash
+apt install letsencrypt
+letsencrypt certonly --webroot -w /var/www/timelines -d timelines.issarice.com
+letsencrypt renew --dry-run --agree-tos
+vim /etc/crontab # add '0 0 1 * * letsencrypt renew'
+vim /etc/nginx/sites-available/default
+```
 
 ## MediaWiki extensions
 
