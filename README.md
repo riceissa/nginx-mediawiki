@@ -178,6 +178,10 @@ Template:Microsoft
 Template:See also
 Template:Yahoo! Inc.
 Template:Sfn
+Template:Update inline
+Template:Verify source
+Template:Dead link
+Template:Cbignore
 ```
 
 Here is an example of an importing process:
