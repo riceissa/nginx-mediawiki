@@ -17,6 +17,7 @@ Full list of software:
 - Scribunto
 - ParserFunctions
 - Cite
+- Google Analytics
 
 ## MediaWiki imports
 
