@@ -40,6 +40,12 @@ coming soon.
 
 coming soon.
 
+## DNS stuff
+
+On Linode's DNS manager, add a new subdomain for `timelines.issarice.com`, and
+make sure to point it to the new instance.
+Also on the new Linode instance, set up reverse DNS.
+
 ## Install MediaWiki
 
 We will be installing MediaWiki at `/var/www/timelines/`.
