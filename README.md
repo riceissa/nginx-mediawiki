@@ -26,8 +26,6 @@ As root:
 ```bash
 apt update
 apt upgrade
-apt install mysql-server
-mysql_secure_installation
 apt install lynx # useful later for configuring MediaWiki
 ```
 
@@ -49,7 +47,12 @@ apt install php-mbstring php-xml
 
 ## Set up MySQL
 
-coming soon.
+As root:
+
+```bash
+apt install mysql-server
+mysql_secure_installation
+```
 
 ## DNS stuff
 
