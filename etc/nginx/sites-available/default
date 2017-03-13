@@ -40,7 +40,10 @@ server {
 	# }
 
 	location ~ \.php$ {
-		include fastcgi_params;
+		# For fastcgi_params vs fastcgi.conf, see
+		# http://blog.martinfjordvald.com/2013/04/nginx-config-history-fastcgi_params-versus-fastcgi-conf/
+		# The short story is that the former has one extra line.
+		include fastcgi.conf;
 		# The example at
 		# https://www.nginx.com/resources/wiki/start/topics/recipes/mediawiki/
 		# just has "/tmp/phpfpm.sock" here, which made me think that
@@ -52,12 +55,6 @@ server {
 		# exists on Ubuntu. Why would it be in two places? I have no
 		# idea.
 		fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
-
-		# For some reason, the following line is very important, and
-		# without it, I was getting a blank screen when navigating to
-		# my site. I got this line from
-		# http://stackoverflow.com/a/15424808/3422337
-		fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
 	}
 
 	location @mediawiki {
