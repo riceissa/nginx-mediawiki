@@ -199,6 +199,7 @@ Template:ISSN
 Template:US patent
 Template:Cite newsgroup
 Template:Timelines of computing
+Template:Cn
 ```
 
 Here is an example of an importing process:
