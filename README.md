@@ -83,3 +83,11 @@ Template:Cite conference
 Template:Rp
 Template:As of
 ```
+
+Here is an example of an importing process:
+
+```bash
+cd /var/www/timelines/maintenance
+php importDump.php < /home/issa/Wikipedia-20170312181023.xml
+php rebuildrecentchanges.php
+```
