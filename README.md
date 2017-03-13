@@ -2,6 +2,9 @@
 
 Instructions for setting up MediaWiki on nginx on Ubuntu 16.10
 
+These instructions were written in the process of setting up the
+[timelines wiki](https://timelines.issarice.com/wiki/Main_Page).
+
 Full list of software:
 
 - Ubuntu 16.10
