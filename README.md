@@ -187,6 +187,18 @@ Template:US$
 Template:Redirect
 Template:Amazon.com
 Template:Tesla Motors
+Template:1/2
+Template:1/4
+Template:Efn-ua
+Template:Interlanguage link
+Template:Key press
+Template:Notelist-ua
+Template:Cite patent
+Template:Sic
+Template:ISSN
+Template:US patent
+Template:Cite newsgroup
+Template:Timelines of computing
 ```
 
 Here is an example of an importing process:
