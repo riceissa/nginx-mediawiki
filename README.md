@@ -17,6 +17,12 @@ Full list of software:
 
 ## MediaWiki extensions
 
+The first three MediaWiki extensions are required for correctly rendering
+wikitext copied from the English Wikipedia.
+This is because the English Wikipedia uses various templates and extra tags.
+Google Analytics is a personal preference but is not required for rendering
+content.
+
 - Scribunto
 - ParserFunctions
 - Cite
