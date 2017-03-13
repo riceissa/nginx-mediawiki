@@ -41,10 +41,23 @@ server {
 
 	location ~ \.php$ {
 		include fastcgi_params;
-		# fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+		# The example at
+		# https://www.nginx.com/resources/wiki/start/topics/recipes/mediawiki/
+		# just has "/tmp/phpfpm.sock" here, which made me think that
+		# php-fpm just wanted a place to write to, but I found out that
+		# apparently this sock file should actually already exist on
+		# the filesystem, which happens to be
+		# "/var/run/php/php7.0-fpm.sock" on Ubuntu. I think
+		# "/run/php/php7.0-fpm.sock" will also work here, as that
+		# exists on Ubuntu. Why would it be in two places? I have no
+		# idea.
 		fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+
+		# For some reason, the following line is very important, and
+		# without it, I was getting a blank screen when navigating to
+		# my site. I got this line from
+		# http://stackoverflow.com/a/15424808/3422337
 		fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
-		# fastcgi_index index.php;
 	}
 
 	location @mediawiki {
