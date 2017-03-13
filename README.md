@@ -116,6 +116,15 @@ deduplicate revisions, so I'm pretty sure importing twice is fine.
 (Note: I began by trying to import the XML dump with the "full history" so I have
 no idea what happens if you only try to get the most recent version.)
 
+The MediaWiki instructions linked above is fine for step 1.
+But since we're exporting from the English Wikipedia, go to [Special:Export](https://en.wikipedia.org/wiki/Special:Export)
+on that wiki instead.
+As for step 2, I found Special:Import to be unreliable because the connection
+kept resetting, so I used `importDump.php` in the MediaWiki `maintenance`
+directory instead.
+
+List of pages I exported:
+
 ```
 Template:Reflist
 Template:Snd
