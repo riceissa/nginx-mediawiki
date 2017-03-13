@@ -200,6 +200,7 @@ Template:US patent
 Template:Cite newsgroup
 Template:Timelines of computing
 Template:Cn
+Template:Harvnb
 ```
 
 Here is an example of an importing process:
