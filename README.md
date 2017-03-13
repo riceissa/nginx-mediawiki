@@ -174,6 +174,7 @@ Template:Rp
 Template:As of
 MediaWiki:Gadget-ReferenceTooltips.css
 MediaWiki:Gadget-ReferenceTooltips.js
+Template:Microsoft
 ```
 
 Here is an example of an importing process:
