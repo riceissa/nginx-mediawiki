@@ -202,6 +202,12 @@ Template:Timelines of computing
 Template:Cn
 Template:Harvnb
 Template:Cancer timeline
+Template:Authority control
+Template:Inconsistent citations
+Template:Influenza
+Template:Portalbar
+Template:Respiratory pathology
+Template:Viral diseases
 ```
 
 Here is an example of an importing process:
