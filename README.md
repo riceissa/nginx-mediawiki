@@ -21,6 +21,7 @@ Full list of software:
 - Follow [Getting Started with Linode](https://www.linode.com/docs/getting-started)
 - Follow [Securing Your Server](https://www.linode.com/docs/security/securing-your-server)
 - Reference [LEMP Server on Ubuntu 16.04 (Xenial Xerus)](https://www.linode.com/docs/websites/lemp/lemp-server-on-ubuntu-16-04)
+- Reference [How To Install Linux, Nginx, MySQL, PHP (LEMP stack) in Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04)
 
 As root:
 
