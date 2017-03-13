@@ -46,6 +46,12 @@ apt install mysql-server
 mysql_secure_installation
 ```
 
+Configure MySQL:
+
+    mysql -u root -p
+    create database timelines;
+    # do more stuff
+
 ## DNS stuff
 
 On Linode's DNS manager, add a new subdomain for `timelines.issarice.com`, and
