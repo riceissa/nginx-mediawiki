@@ -101,7 +101,7 @@ I'll just link to the official documentation because I have nothing to add.
 - [Scribunto](https://www.mediawiki.org/wiki/Extension:Scribunto)
 - [ParserFunctions](https://www.mediawiki.org/wiki/Extension:ParserFunctions)
 - [Cite](https://www.mediawiki.org/wiki/Extension:Cite)
-- [Google Analytics](https://www.mediawiki.org/wiki/Extension:Google_Analytics_Integration)
+- [Google Analytics Integration](https://www.mediawiki.org/wiki/Extension:Google_Analytics_Integration)
 
 ## MediaWiki imports
 
