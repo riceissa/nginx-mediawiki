@@ -201,6 +201,7 @@ Template:Cite newsgroup
 Template:Timelines of computing
 Template:Cn
 Template:Harvnb
+Template:Cancer timeline
 ```
 
 Here is an example of an importing process:
