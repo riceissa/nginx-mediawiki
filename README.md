@@ -29,7 +29,7 @@ apt upgrade
 apt install lynx # useful later for configuring MediaWiki
 ```
 
-## Set up nginx
+## Set up nginx, php-fpm, and MySQL
 
 - Reference [LEMP Server on Ubuntu 16.04 (Xenial Xerus)](https://www.linode.com/docs/websites/lemp/lemp-server-on-ubuntu-16-04);
   not all of it was necessary
@@ -42,13 +42,6 @@ As root:
 apt install nginx
 apt install php-fpm php-mysql php-mbstring php-xml
 systemctl restart php7.0-fpm
-```
-
-## Set up MySQL
-
-As root:
-
-```bash
 apt install mysql-server
 mysql_secure_installation
 ```
