@@ -40,9 +40,8 @@ As root:
 
 ```bash
 apt install nginx
-apt install php-fpm php-mysql
+apt install php-fpm php-mysql php-mbstring php-xml
 systemctl restart php7.0-fpm
-apt install php-mbstring php-xml
 ```
 
 ## Set up MySQL
