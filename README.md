@@ -176,6 +176,7 @@ MediaWiki:Gadget-ReferenceTooltips.css
 MediaWiki:Gadget-ReferenceTooltips.js
 Template:Microsoft
 Template:See also
+Template:Yahoo! Inc.
 ```
 
 Here is an example of an importing process:
