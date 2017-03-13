@@ -95,6 +95,8 @@ Template:Use mdy dates
 Template:Cite conference
 Template:Rp
 Template:As of
+MediaWiki:Gadget-ReferenceTooltips.css
+MediaWiki:Gadget-ReferenceTooltips.js
 ```
 
 Here is an example of an importing process:
