@@ -43,7 +43,8 @@ coming soon.
 ## Install MediaWiki
 
 We will be installing MediaWiki at `/var/www/timelines/`.
-Modified from the [instructions on the MediaWiki manual](https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Debian_or_Ubuntu):
+Modified from the [instructions on the MediaWiki manual](https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Debian_or_Ubuntu)
+(note that the official Ubuntu guide is for Apache, and here we're using nginx):
 
 ```bash
 mkdir /home/issa/Downloads
