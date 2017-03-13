@@ -15,6 +15,13 @@ Full list of software:
 - certbot (letsencrypt)
 - Linode for domain stuff
 
+## Set up the system
+
+As root:
+
+    apt update
+    apt upgrade
+
 ## MediaWiki extensions
 
 The first three MediaWiki extensions are required for correctly rendering
