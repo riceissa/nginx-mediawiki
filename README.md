@@ -47,4 +47,5 @@ Template:Cite book
 Template:Use mdy dates
 Template:Cite conference
 Template:Rp
+Template:As of
 ```
