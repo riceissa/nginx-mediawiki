@@ -43,7 +43,16 @@ coming soon.
 
 ## Install MediaWiki
 
-coming soon.
+We will be installing MediaWiki at `/var/www/timelines/`.
+Modified from the [instructions on the MediaWiki manual](https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Debian_or_Ubuntu):
+
+```bash
+mkdir /home/issa/Downloads
+cd /home/issa/Downloads
+wget https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.0.tar.gz
+tar xvzf mediawiki-1.28.0.tar.gz
+mv mediawiki-1.28.0 /var/www/timelines
+```
 
 ## Set up HTTPS support
 
