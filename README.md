@@ -55,6 +55,8 @@ mv mediawiki-1.28.0 /var/www/timelines
 
 ## Set up HTTPS support
 
+Instructions are modified from the [official instructions](https://certbot.eff.org/all-instructions/#ubuntu-16-04-xenial-nginx).
+
 As root:
 
 ```bash
