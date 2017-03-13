@@ -208,6 +208,7 @@ Template:Influenza
 Template:Portalbar
 Template:Respiratory pathology
 Template:Viral diseases
+Template:Quote
 ```
 
 Here is an example of an importing process:
