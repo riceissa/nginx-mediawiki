@@ -177,6 +177,7 @@ MediaWiki:Gadget-ReferenceTooltips.js
 Template:Microsoft
 Template:See also
 Template:Yahoo! Inc.
+Template:Sfn
 ```
 
 Here is an example of an importing process:
