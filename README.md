@@ -10,6 +10,7 @@ Full list of software:
 - Ubuntu 16.10
 - nginx
 - MediaWiki
+- MediaWiki extensions
 - MediaWiki templates
 - php7.0-fpm
 - certbot (letsencrypt)
@@ -35,6 +36,18 @@ letsencrypt renew --dry-run --agree-tos
 vim /etc/crontab # add '0 0 1 * * letsencrypt renew'
 vim /etc/nginx/sites-available/default
 ```
+
+## Set up nginx
+
+coming soon.
+
+## Install MediaWiki
+
+coming soon.
+
+## Set up HTTPS support
+
+coming soon.
 
 ## MediaWiki extensions
 
