@@ -55,6 +55,8 @@ mv mediawiki-1.28.0 /var/www/timelines
 
 Now do `lynx http://localhost/index.php` to fill in the web form to complete
 the installation.
+The [setup instructions on the MediaWiki site](https://www.mediawiki.org/wiki/Manual:Config_script)
+are pretty detailed, and it pretty much goes as expected.
 
 ## Set up HTTPS support
 
