@@ -45,6 +45,8 @@ coming soon.
 On Linode's DNS manager, add a new subdomain for `timelines.issarice.com`, and
 make sure to point it to the new instance.
 Also on the new Linode instance, set up reverse DNS.
+Note that **even if you do everything right, there will be a delay until the
+domain starts working**, so don't panic.
 
 ## Install MediaWiki
 
