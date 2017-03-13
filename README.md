@@ -186,6 +186,7 @@ Template:Cbignore
 Template:US$
 Template:Redirect
 Template:Amazon.com
+Template:Tesla Motors
 ```
 
 Here is an example of an importing process:
