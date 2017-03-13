@@ -174,6 +174,7 @@ Template:Rp
 Template:As of
 MediaWiki:Gadget-ReferenceTooltips.css
 MediaWiki:Gadget-ReferenceTooltips.js
+
 Template:Microsoft
 Template:See also
 Template:Yahoo! Inc.
@@ -182,6 +183,9 @@ Template:Update inline
 Template:Verify source
 Template:Dead link
 Template:Cbignore
+Template:US$
+Template:Redirect
+Template:Amazon.com
 ```
 
 Here is an example of an importing process:
