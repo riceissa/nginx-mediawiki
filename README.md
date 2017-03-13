@@ -19,8 +19,16 @@ Full list of software:
 
 As root:
 
-    apt update
-    apt upgrade
+```bash
+apt update
+apt upgrade
+apt install nginx
+apt install mysql-server
+mysql_secure_installation
+apt install php-fpm php-mysql
+systemctl restart php7.0-fpm
+apt install lynx # useful later for configuring MediaWiki
+```
 
 ## MediaWiki extensions
 
