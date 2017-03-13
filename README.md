@@ -211,6 +211,9 @@ Template:Viral diseases
 Template:Quote
 Template:Citation needed
 Template:Cite encyclopedia
+Template:USD
+Template:E-commerce
+Template:Citation
 ```
 
 Here is an example of an importing process:
