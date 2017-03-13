@@ -88,7 +88,7 @@ In the regular server block, change the port and give an SSL certificate:
 
 ## MediaWiki extensions
 
-The first three MediaWiki extensions are required for correctly rendering
+The first three of the following MediaWiki extensions are required for correctly rendering
 wikitext copied from the English Wikipedia.
 This is because the English Wikipedia uses various templates and extra tags.
 Google Analytics is a personal preference but is not required for rendering
