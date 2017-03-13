@@ -79,6 +79,8 @@ the installation.
 The [setup instructions on the MediaWiki site](https://www.mediawiki.org/wiki/Manual:Config_script)
 are pretty detailed, and it pretty much goes as expected.
 
+TODO talk about permissions for the files in the mediawiki archive.
+
 ## Set up HTTPS support
 
 Instructions are modified from the [official instructions](https://certbot.eff.org/all-instructions/#ubuntu-16-04-xenial-nginx).
