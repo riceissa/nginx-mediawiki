@@ -23,6 +23,9 @@ This is because the English Wikipedia uses various templates and extra tags.
 Google Analytics is a personal preference but is not required for rendering
 content.
 
+The setup for these is pretty straightforward: download the tarball, extract it
+to the correct location, and add a few lines in `LocalSettings.php`.
+
 - Scribunto
 - ParserFunctions
 - Cite
