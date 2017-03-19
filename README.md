@@ -123,6 +123,8 @@ wikitext copied from the English Wikipedia.
 This is because the English Wikipedia uses various templates and extra tags.
 Google Analytics is a personal preference but is not required for rendering
 content.
+MobileFrontend is to make the appearance better on mobile devices, but is not
+required.
 
 The setup for these is pretty straightforward: download the tarball, extract it
 to the correct location, and add a few lines in `LocalSettings.php`.
@@ -132,6 +134,7 @@ I'll just link to the official documentation because I have nothing to add.
 - [ParserFunctions](https://www.mediawiki.org/wiki/Extension:ParserFunctions)
 - [Cite](https://www.mediawiki.org/wiki/Extension:Cite)
 - [Google Analytics Integration](https://www.mediawiki.org/wiki/Extension:Google_Analytics_Integration)
+- [MobileFrontend](https://www.mediawiki.org/wiki/Extension:MobileFrontend)
 
 ## MediaWiki imports
 
