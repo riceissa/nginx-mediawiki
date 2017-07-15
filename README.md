@@ -218,6 +218,10 @@ Template:E-commerce
 Template:Citation
 
 Template:End div col
+Template:Single double
+Template:'"
+Template:Double single
+Template:"'
 ```
 
 Here is an example of an importing process:
