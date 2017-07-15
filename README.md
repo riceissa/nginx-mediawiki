@@ -216,7 +216,6 @@ Template:Cite encyclopedia
 Template:USD
 Template:E-commerce
 Template:Citation
-
 Template:End div col
 Template:Single double
 Template:'"
