@@ -140,7 +140,7 @@ I'll just link to the official documentation because I have nothing to add.
 
 [MediaWiki's instructions](https://www.mediawiki.org/wiki/Help:Templates#Copying_from_one_wiki_to_another)
 specifically say to 'Uncheck the box "Include only the current revision, not the full history".'
-**However** I find that checking this returns a very old version of the page for at least one
+**However** I find that unchecking this returns a very old version of the page for at least one
 page (`MediaWiki:Common.css`).
 I have no idea why this is, but one remedy is to export both with this box checked and with this
 box unchecked.
