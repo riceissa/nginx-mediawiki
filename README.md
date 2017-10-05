@@ -244,3 +244,31 @@ php rebuildrecentchanges.php
 ```
 
 ## Interwiki links
+
+You will need to log in to the database for this.
+
+The [example on the MediaWiki documentation](https://www.mediawiki.org/wiki/Manual:Interwiki#Single_line)
+is slightly outdated.
+
+Log in:
+
+```bash
+mysql -u your_username -p
+# enter password
+```
+
+From the MySQL prompt, add the interwiki links:
+
+```mysql
+insert into interwiki (iw_prefix, iw_url, iw_local, iw_trans, iw_api, iw_wikiid)
+values
+('w','https://en.wikipedia.org/wiki/$1',1,0,'',''),
+('devec','https://devec.subwiki.org/wiki/$1',1,0,'',''),
+('market','https://market.subwiki.org/wiki/$1',1,0,'',''),
+('demography','https://demography.subwiki.org/wiki/$1',1,0,'','');
+```
+
+Other wikis to consider:
+
+- LessWrong Wiki
+- Bitcoin Wiki (which one?)
