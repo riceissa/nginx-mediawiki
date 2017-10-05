@@ -16,6 +16,17 @@ Full list of software:
 - certbot (letsencrypt)
 - Linode for domain stuff
 
+## Contents
+
+- [Set up the system](#set-up-the-system)
+- [Set up nginx, php-fpm, and MySQL](#set-up-nginx-php-fpm-and-mysql)
+- [DNS stuff](#dns-stuff)
+- [Install MediaWiki](#install-mediawiki)
+- [Set up HTTPS support](#set-up-https-support)
+- [MediaWiki extensions](#mediawiki-extensions)
+- [MediaWiki imports](#mediawiki-imports)
+- [Interwiki links](#interwiki-links)
+
 ## Set up the system
 
 - Follow [Getting Started with Linode](https://www.linode.com/docs/getting-started)
@@ -231,3 +242,5 @@ cd /var/www/timelines/maintenance
 php importDump.php < /home/issa/Wikipedia-20170312181023.xml
 php rebuildrecentchanges.php
 ```
+
+## Interwiki links
