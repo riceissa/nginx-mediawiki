@@ -245,6 +245,11 @@ php rebuildrecentchanges.php
 
 ## Interwiki links
 
+**NOTE**: Newer versions of MediaWiki come with the [Interwiki extension](https://www.mediawiki.org/wiki/Extension:Interwiki).
+You will need to add two lines to `LocalSettings.php` after which you can add
+interwiki links from Special:Interwiki/add.
+Alternatively use the database instructions below.
+
 You will need to log in to the database for this.
 
 The [example on the MediaWiki documentation](https://www.mediawiki.org/wiki/Manual:Interwiki#Single_line)
