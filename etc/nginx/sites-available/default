@@ -35,6 +35,22 @@ server {
 		try_files $uri $uri/ @mediawiki;
 	}
 
+	location = /LocalSettings.php {
+		deny all;
+	}
+
+	location = /.LocalSettings.php.swp {
+		deny all;
+	}
+
+	location = /.LocalSettings.php.swo {
+		deny all;
+	}
+
+	location = /LocalSettings.php~ {
+		deny all;
+	}
+
 	# location @rewrite {
 		# rewrite ^/(.*)$ /index.php?title=$1&$args;
 	# }
