@@ -146,6 +146,9 @@ I'll just link to the official documentation because I have nothing to add.
 - [Cite](https://www.mediawiki.org/wiki/Extension:Cite)
 - [Google Analytics Integration](https://www.mediawiki.org/wiki/Extension:Google_Analytics_Integration)
 - [MobileFrontend](https://www.mediawiki.org/wiki/Extension:MobileFrontend)
+- Echo
+- Thanks
+- Interwiki
 
 ## MediaWiki imports
 
