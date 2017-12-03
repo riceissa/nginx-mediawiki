@@ -288,3 +288,19 @@ latest version now is Ubuntu 17.10. One difficulty with the upgrade here is that
 MediaWiki 1.28 (or one of the extensions) is incompatible with php7.1-fpm,
 which comes with Ubuntu 17.10. To
 get around this, one must upgrade to MediaWiki 1.29.2.
+
+The MediaWiki upgrade process was rather straightforward. I refereed to the following
+references while performing the upgrade:
+
+- [Vipul Naik's upgrade steps](https://raw.githubusercontent.com/vipulnaik/working-drafts/dd0b3bc108789a5d16d9f03127165a935267aa7e/install-update-and-recover/mediawiki-1.29.txt)
+- [Manual:Upgrading](https://www.mediawiki.org/wiki/Manual:Upgrading)
+
+For juggling the directories in `/var/www`, I would did the following:
+
+- First, stop nginx
+- Set up the new MediaWiki directory in `/var/www/timelines-new`
+- Move `/var/www/timelines` to `/var/www/timelines-old`
+- Move `/var/www/timelines-new` to `/var/www/timelines`
+
+I copied `LocalSettings.php` and `images/`. I did not copy over
+any extensions, choosing instead to just install them again.
