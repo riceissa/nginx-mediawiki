@@ -148,7 +148,7 @@ I'll just link to the official documentation because I have nothing to add.
 - [MobileFrontend](https://www.mediawiki.org/wiki/Extension:MobileFrontend)
 - Echo
 - Thanks
-- Interwiki
+- Interwiki (bundled with default install so no need to download separately)
 
 ## MediaWiki imports
 
