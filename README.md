@@ -287,7 +287,8 @@ When I originally wrote this page, the latest version of Ubuntu was 16.10. The
 latest version now is Ubuntu 17.10. One difficulty with the upgrade here is that
 MediaWiki 1.28 (or one of the extensions) is incompatible with php7.1-fpm,
 which comes with Ubuntu 17.10. To
-get around this, one must upgrade to MediaWiki 1.29.2.
+get around this, I upgraded to MediaWiki 1.29.2 (along with all of the
+extensions).
 
 The MediaWiki upgrade process was rather straightforward. I referred to the following
 references while performing the upgrade:
