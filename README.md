@@ -296,9 +296,9 @@ references while performing the upgrade:
 - [Vipul Naik's upgrade steps](https://raw.githubusercontent.com/vipulnaik/working-drafts/dd0b3bc108789a5d16d9f03127165a935267aa7e/install-update-and-recover/mediawiki-1.29.txt)
 - [Manual:Upgrading](https://www.mediawiki.org/wiki/Manual:Upgrading)
 
-For juggling the directories in `/var/www`, I would did the following:
+For juggling the directories in `/var/www`, I did the following:
 
-- First, stop nginx
+- Stop nginx
 - Set up the new MediaWiki directory in `/var/www/timelines-new`
 - Move `/var/www/timelines` to `/var/www/timelines-old`
 - Move `/var/www/timelines-new` to `/var/www/timelines`
