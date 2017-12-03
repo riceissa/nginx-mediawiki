@@ -289,7 +289,7 @@ MediaWiki 1.28 (or one of the extensions) is incompatible with php7.1-fpm,
 which comes with Ubuntu 17.10. To
 get around this, one must upgrade to MediaWiki 1.29.2.
 
-The MediaWiki upgrade process was rather straightforward. I refereed to the following
+The MediaWiki upgrade process was rather straightforward. I referred to the following
 references while performing the upgrade:
 
 - [Vipul Naik's upgrade steps](https://raw.githubusercontent.com/vipulnaik/working-drafts/dd0b3bc108789a5d16d9f03127165a935267aa7e/install-update-and-recover/mediawiki-1.29.txt)
