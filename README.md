@@ -305,3 +305,9 @@ For juggling the directories in `/var/www`, I did the following:
 
 I copied `LocalSettings.php` and `images/`. I did not copy over
 any extensions, choosing instead to just install them again.
+
+The suggested commands for changing permissions of the `images/` directory
+(`find ./images -type d -exec chmod 755 {} \;` and
+`chgrp -R www-data images`) might not be enough.
+I found that I was unable to upload any images ("Could not open lock file" etc.).
+To fix this, I also had to run `chown -R www-data:www-data images`.
