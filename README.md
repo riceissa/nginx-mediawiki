@@ -311,3 +311,21 @@ The suggested commands for changing permissions of the `images/` directory
 `chgrp -R www-data images`) might not be enough.
 I found that I was unable to upload any images ("Could not open lock file" etc.).
 To fix this, I also had to run `chown -R www-data:www-data images`.
+
+## Upgrading to Ubuntu 18.04
+
+Ubuntu 18.04 has PHP 7.2 as the default,
+but [MediaWiki does not yet support this version of
+PHP](https://www.mediawiki.org/wiki/Compatibility#PHP).
+It's supported starting MediaWiki version 1.31,
+but 1.31 is apparently not yet an official release.
+
+So what I did was keep the current version of MediaWiki
+and use a PPA to install PHP 7.1 again:
+
+- <https://serverfault.com/questions/895746/switch-from-php-7-2-to-7-1-on-ubuntu-16-04-apache>
+- <https://websiteforstudents.com/downgrade-php-7-2-to-php-7-1-with-nginx-support-on-ubuntu-16-04-17-10-and-18-04/>
+
+Then in the nginx config, I just specified that PHP 7.1 should be used (which
+should have been the case already, since PHP 7.1 was the version before the
+upgrade).
