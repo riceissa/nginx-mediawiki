@@ -26,6 +26,7 @@ Full list of software:
 - [MediaWiki extensions](#mediawiki-extensions)
 - [MediaWiki imports](#mediawiki-imports)
 - [Interwiki links](#interwiki-links)
+- [Reference tooltips](#reference-tooltips)
 
 ## Set up the system
 
@@ -280,6 +281,21 @@ Other wikis to consider:
 
 - LessWrong Wiki
 - Bitcoin Wiki (which one?)
+
+## Reference tooltips
+
+[Reference tooltips](https://www.mediawiki.org/wiki/Reference_Tooltips) are the the hover-over popups that show up when you hover over a reference superscript.
+
+To get reference tooltips for your wiki, here are the steps:
+
+* Go to https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=edit and copy the source code to your wiki, by going to https://yourwiki.domain/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=edit
+* Go to https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.css&action=edit and copy the source code to your wiki, by going to https://yourwiki.domain/index.php?title=MediaWiki:Gadget-ReferenceTooltips.css&action=edit
+* Go to https://yourwiki.domain/index.php?title=MediaWiki:Common.js&action=edit and add the following lines, which will import the reference tooltips JavaScript/CSS so that it is loaded on every page:
+
+  ```javascript
+  mw.loader.load('/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=raw&ctype=text/javascript');
+  mw.loader.load('/index.php?title=MediaWiki:Gadget-ReferenceTooltips.css&action=raw&ctype=text/css', 'text/css');
+  ```
 
 ## Upgrading to Ubuntu 17.10
 
