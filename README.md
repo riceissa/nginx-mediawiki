@@ -284,12 +284,12 @@ Other wikis to consider:
 
 ## Reference tooltips
 
-[Reference tooltips](https://www.mediawiki.org/wiki/Reference_Tooltips) are the the hover-over popups that show up when you hover over a reference superscript.
+[Reference tooltips](https://www.mediawiki.org/wiki/Reference_Tooltips) are the the hover-over popups that show up when you hover over a reference superscript. If you used the [MediaWiki imports above](#mediawiki-imports) then this will already be included. However if you didn't include reference tooltips in your imports, then this is another way to do the same thing.
 
 To get reference tooltips for your wiki, here are the steps:
 
-* Go to https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=edit and copy the source code to your wiki, by going to https://yourwiki.domain/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=edit
-* Go to https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.css&action=edit and copy the source code to your wiki, by going to https://yourwiki.domain/index.php?title=MediaWiki:Gadget-ReferenceTooltips.css&action=edit
+* Get the JavaScript: Go to https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=edit and copy the source code to your wiki, by going to https://yourwiki.domain/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=edit
+* Get the CSS: Go to https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.css&action=edit and copy the source code to your wiki, by going to https://yourwiki.domain/index.php?title=MediaWiki:Gadget-ReferenceTooltips.css&action=edit
 * Go to https://yourwiki.domain/index.php?title=MediaWiki:Common.js&action=edit and add the following lines, which will import the reference tooltips JavaScript/CSS so that it is loaded on every page:
 
   ```javascript
