@@ -245,7 +245,7 @@ uses external data that is stored on commons.wikimedia.org. By default, your Med
 will not be able to access this data. However, in Module:Citation/CS1/Configuration this is a line that
 looks like:
 
-```
+```lua
 local use_commons_data = true; -- set to false if your wiki does not have access to mediawiki commons
 ```
 
