@@ -250,6 +250,19 @@ php importDump.php < /home/issa/Wikipedia-20170312181023.xml
 php rebuildrecentchanges.php
 ```
 
+## Cite web template fix
+
+As of 2025, one of cite web's dependencies, <https://en.wikipedia.org/wiki/Module:Citation/CS1/Configuration>,
+uses external data that is stored on commons.wikimedia.org. By default, your MediaWiki installation
+will not be able to access this data. However, in Module:Citation/CS1/Configuration this is a line that
+looks like:
+
+```
+local use_commons_data = true; -- set to false if your wiki does not have access to mediawiki commons
+```
+
+Toggle this to `false` to use the hardcoded values in the Lua file. This will make Cite web work.
+
 ## Interwiki links
 
 **NOTE**: Newer versions of MediaWiki come with the [Interwiki extension](https://www.mediawiki.org/wiki/Extension:Interwiki).
