@@ -228,6 +228,8 @@ Template:PD
 Template:Reference page
 Module:Citation/CS1/Suggestions
 Template:Date table sorting
+Template:Single+double
+Template:Double+single
 ```
 
 Here is an example of an importing process:
