@@ -230,6 +230,7 @@ Module:Citation/CS1/Suggestions
 Template:Date table sorting
 Template:Single+double
 Template:Double+single
+Template:Blockquote
 ```
 
 Here is an example of an importing process:
