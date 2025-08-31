@@ -360,4 +360,199 @@ attacks (oops), I finally sat down to upgrade to the latest Ubuntu LTS and to al
 upgrade the MediaWiki to the latest.  This took a _lot_ of work over multiple days, so
 I want to document some of that here.
 
+### Ubuntu
 
+The Ubuntu upgrades were pretty painless. It was mostly just:
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo do-release-upgrade
+```
+
+To go from 18.04 to 24.04, I had to do a chain of LTS upgrades:
+
+18.04 → 20.04 → 22.04 → 24.04
+
+For the first two upgrades, whenever I was prompted whether to keep my
+current configuration files or to install the maintainer's new version,
+I just selected to _keep my current files_.  For the final upgrade,
+I decided I should review the diff. I went into the shell and ran vimdiff
+to review the changes. I pulled in any new things that seemed good to have.
+
+There were two problems after the Ubuntu upgrades: (1) the MW site
+that used templates were completely broken (because the old Scribunto
+couldn't run on the new PHP, or something like that), and (2) all my
+pip packages were gone, in particular the one for AWS, so backups
+were failing to upload.
+
+Problem (2) was easy to fix, just:
+
+```bash
+sudo apt install python3-pip
+pip3 install --break-system-packages awscli
+```
+
+Problem (1) was harder.
+
+### MediaWiki upgrades from 1.29 to 1.44
+
+MW upgrades proceed like this. You first cd to `/var/www` and then
+download the tarball for the new MW release there.  Then you unpack it,
+and move the `images` folder and `LocalSettings.php` from the old MW
+folder to the new one. Then you run:
+
+```bash
+php maintenance/update.php
+```
+
+from the new MW folder. However, when I did this to try to upgrade
+from 1.29 to 1.44, MW complained that 1.29 was too old ("Can not
+upgrade from versions older than 1.35, please upgrade to that version
+or later first."), and that I had to go to 1.35 first. So I ended up
+repeating the whole thing again, making a 1.35 MW folder first, and
+running the upgrade script there first. This worked, and then I went
+back to the 1.44 folder and ran the upgrade script there.
+
+The upgrade from 1.35 to 1.44 kept failing; the error was "Error: 2006
+MySQL server has gone away". This kept happening, and finally what
+worked was to shut down the nginx process and _then_ rerun the upgrade
+php script. My guess is that the server was already taxed from having
+to deal with requests being made to it (from visitors and bots) and so
+couldn't also do the upgrade. However, since my server has a cronjob
+to restart nginx if it detects nginx has stopped, I had to first
+disable that cronjob (and then not forget to turn it back on once the
+upgrades were all done).
+
+After MW upgraded to 1.44, the site was mostly working again except
+for templates.
+
+I first tried re-importing the latest templates from Wikipedia using
+<https://en.wikipedia.org/wiki/Special:Export> to retrieve the latest
+versions. This seemed to fix a few of the templates, and I saw stuff
+in Special:RecentChanges. However, some templates like cite web just
+don't seem to have been imported, even though I they were in the XML
+file. And even more weirdly, when I tried to edit the `Template:Cite web`
+page on TW to try to copy the Wikipedia cite web template code, MediaWiki
+said the page has changed since I started editing, so I couldn't
+save my manual edit. After a bunch more fussing around, I realized that
+what seemed to have happened is that since the templates were created
+by accounts that were _not_ on TW, the MW upgrade process seemed to
+have gotten confused and just deleted the _revisions_ associated
+with those pages. However, the upgrade process did not delete the actual
+_content_ of the pages, so those pages were still in the `page` table
+in the database. This inconsistent state, where the revisions were
+gone but the pages were there, seemed to confuse MW. So what I ended
+up doing is to delete the pages from the database using stuff like:
+
+```sql
+select page_id from page where page_namespace = 10 and page_title = 'Cite_web';
+# suppose that printed '3346'; then I would type:
+delete from page where page_id = 3346;
+```
+
+After deleting the page from the `page` table, now there is no trace
+of that template page on the wiki. At this point, I re-imported the
+page from the XML, and it worked.
+
+After that, most templates were working, but cite web was still
+not working. It was failing with some sort of Lua error.
+I had to make the change listed [here](#cite-web-template-fix)
+in order to get it working again.
+
+Now the reference tooltips were not working. It turned out that the
+reference tooltips were now 'gadgets' rather than just JS/CSS that you
+could copy to your wiki, so you have to register them officially as a
+'gadget'. To fix this, I had to follow the instructions
+[here](https://www.mediawiki.org/wiki/Reference_Tooltips#About),
+namely:
+
+1. Make sure https://en.wikipedia.org/wiki/MediaWiki:Gadget-ReferenceTooltips.js is the latest version from Wikipedia.
+2. Make sure https://en.wikipedia.org/wiki/MediaWiki:Gadget-ReferenceTooltips.css is the latest version from Wikipedia.
+3. Edit the page `MediaWiki:Gadgets-definition` on TW to add the line:
+
+   ```
+   * ReferenceTooltips[ResourceLoader|default|type=general|dependencies=mediawiki.cookie,jquery.client]|ReferenceTooltips.js|ReferenceTooltips.css
+   ```
+
+4. Make sure https://en.wikipedia.org/wiki/MediaWiki:Gadget-ReferenceTooltips is the latest version from Wikipedia.
+
+5. Make sure the Gadgets extension is loaded in LocalSettings.php. The extension should be installed by default, but not loaded, so you need to add the line:
+
+   ```php
+   wfLoadExtension( 'Gadgets' );
+   ```
+
+Now if you go to your preferences on the wiki, you should see a new
+Gadets tab with Reference Tooltips as the only listed gadget.
+
+After this, the reference tooltips were working again. You might need to
+append `?action=purge` to the page and/or Ctrl-Shift-r in the browser to
+make sure all caches are cleared.
+
+A few other templates at this point were still missing (they weren't in
+the weird state that e.g. cite web was in where I couldn't even edit the
+page; instead, the page simply didn't exist). So for these templates,
+I just had to re-export the XML from Wikipedia and re-import them.
+
+At this point, the server ran out of disk space when doing a nightly
+backup... I think before the
+upgrades, the server was barely managing with just enough disk space
+for the daily backups to be made and then uploaded to AWS. But the
+upgrades themselves took up a bunch of space, so now there was not
+enough space to do the daily backups. After discussing with Vipul,
+I ended up upgrading to the next tier up in Linode.
+
+I also deleted some old kernels that Ubuntu keeps in some weird place,
+and also did apt autoremove/apt autoclean.
+
+Once there was enough disk space and awscli was installed, the backups
+worked.
+
+At this point, the only problem was that the site was ~10x slower
+than it was before the upgrade.
+
+It turned out that part of the slowness was due to some rate-limiting
+nginx logic that I had put in prior to the whole upgrades process. I'm
+not entirely sure what was going on, but it seems possible to me that
+the rate limiting logic was in place, but didn't really work on the
+old nginx (on Ubuntu 18.04), and then once the Ubuntu got upgraded,
+the new nginx started actually implementing the rate limiting logic (or
+it started implementing the logic in a different or 'more effective' way).
+The telltale sign was that when loading any page with images, each
+image would take an extra ~1 second to load. After tweaking the
+rate-limiting logic, the only slowness left was pages with tons of
+references (such as timeline of SpaceX).
+
+For the pages with tons of references, I decided to switch from the
+default luastandalone to the faster luasandbox. This required
+installing a package:
+
+```bash
+sudo apt install php-luasandbox
+```
+
+and then swapping it in LocalSettings.php:
+
+```php
+$wgScribuntoDefaultEngine = 'luasandbox';
+
+# I also increased the cpuLimit because sometimes the references
+# would only partially get generated, with the rest giving a
+# Lua code 24 or whatever.
+$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 20;
+```
+
+After this, LuaSandbox should show up in Special:Version.
+
+I also changed one setting to enable file caching:
+
+```php
+$wgUseFileCache = true;
+```
+
+Finally, in LocalSettings I changed one spot to use `https://` instead
+of `http://`.
+
+After all this work, the site was finally loading in a reasonable amount
+of time (although perhaps still a bit slower than pre-upgrade).
