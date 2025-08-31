@@ -291,6 +291,10 @@ Other wikis to consider:
 
 ## Reference tooltips
 
+**NOTE: these are the old instructions. To see the new instructions go to
+the section on [Upgrading to Ubuntu 20.04](#upgrading-to-ubuntu-2404)
+and look for the part about reference tooltips.**
+
 [Reference tooltips](https://www.mediawiki.org/wiki/Reference_Tooltips) are the the hover-over popups that show up when you hover over a reference superscript. If you used the [MediaWiki imports above](#mediawiki-imports) then this will already be included. However if you didn't include reference tooltips in your imports, then this is another way to do the same thing.
 
 To get reference tooltips for your wiki, here are the steps:
