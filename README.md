@@ -352,3 +352,12 @@ and use a PPA to install PHP 7.1 again:
 Then in the nginx config, I just specified that PHP 7.1 should be used (which
 should have been the case already, since PHP 7.1 was the version before the
 upgrade).
+
+## Upgrading to Ubuntu 24.04
+
+After many years of not touching the server at all except to deal with bot
+attacks (oops), I finally sat down to upgrade to the latest Ubuntu LTS and to also
+upgrade the MediaWiki to the latest.  This took a _lot_ of work over multiple days, so
+I want to document some of that here.
+
+
